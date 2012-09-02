@@ -103,7 +103,11 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape in different modes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+<<<<<<< HEAD
 "if has("autocmd")
+=======
+"if MySys() == 'linux' && has("autocmd")
+>>>>>>> 49eb54b5b2ff76c3fd279b792fe1936f7fc63d10
 "    au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
 "    au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
 "    au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
@@ -219,6 +223,7 @@ if has("gui_running")
   set guioptions-=e
   set guioptions-=r
   set t_Co=256
+  let g:solarized_termcolors=256
   "set guitablabel=%M\ %t
   colorscheme solarized
   set background=dark
@@ -229,8 +234,8 @@ if has("gui_running")
 else
   colorscheme zellner
   "colorscheme solarized
-  set background=dark
   set t_Co=256
+  set background=dark
   set nu
 "  set relativenumber
 endif
@@ -485,9 +490,15 @@ set viminfo^=%
 " => Statusline
 """"""""""""""""""""""""""""""
 " Always hide the statusline
+<<<<<<< HEAD
 "set laststatus=2
 "
 ""Git branch
+=======
+set laststatus=2
+
+"Git branch
+>>>>>>> 49eb54b5b2ff76c3fd279b792fe1936f7fc63d10
 "function! GitBranch()
 "    try
 "        let branch = system("git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'")
@@ -854,8 +865,13 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "hi CursorLine   cterm=NONE ctermbg=DarkGrey
 "hi CursorColumn ctermbg=DarkGrey
 set cursorline cursorcolumn
+<<<<<<< HEAD
 hi CursorLine   cterm=NONE ctermbg=black
 hi CursorColumn cterm=NONE ctermbg=black
+=======
+hi CursorLine   cterm=NONE ctermbg=DarkGrey
+hi CursorColumn cterm=NONE ctermbg=DarkGrey
+>>>>>>> 49eb54b5b2ff76c3fd279b792fe1936f7fc63d10
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
